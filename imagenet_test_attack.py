@@ -30,7 +30,6 @@ from robustbench.model_zoo.enums import ThreatModel
 from utils.imagenetloader import CustomImageFolder
 
 import tent
-import higher
 import copy
 import bn 
 
