@@ -38,7 +38,7 @@ python imagenet_test_attack.py --cfg cfgs/imagenetc/tent.yaml MODEL.ARCH Standar
 Examples for running code for CIFAR-C 
 
 ```
-python cifar_test_attack.py --cfg cfgs/cifar10_wrn_PGD/tent.yaml MODEL.ARCH Standardwrn28  ATTACK.TARGETED True DATA_DIR "../data" CORRUPTION.SEVERITY [3]  
+python cifar_test_attack.py --cfg cfgs/cifar10/tent.yaml MODEL.ARCH Standardwrn28  ATTACK.TARGETED True DATA_DIR "../data" CORRUPTION.SEVERITY [3]  
 ```
 
 
