@@ -1,0 +1,8 @@
+/.DS_Store
+/__pycache__
+/cfgs/.DS_Store
+/cfgs/__pycache__
+# ingore all .DS_Store files
+.DS_Store
+# ignore all __pycache__ folders
+__pycache__

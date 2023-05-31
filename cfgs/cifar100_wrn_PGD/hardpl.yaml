@@ -1,0 +1,49 @@
+MODEL:
+  ADAPTATION: tent
+  ARCH: Standard
+  CKPT_PATH: saved_models/pretrained/cifar100_ce.pth
+  EPS: 6.0
+TEST:
+  DATASET: cifar100
+  BATCH_SIZE: 200
+CORRUPTION:
+  DATASET: cifar100
+  SEVERITY:
+    - 5
+    - 4
+    - 3
+    - 2
+    - 1
+  TYPE:
+    - gaussian_noise
+    - shot_noise
+    - impulse_noise
+    - defocus_blur
+    - glass_blur
+    - motion_blur
+    - zoom_blur
+    - snow
+    - frost
+    - fog
+    - brightness
+    - contrast
+    - elastic_transform
+    - pixelate
+    - jpeg_compression
+    ####### Validation #######
+    # - speckle_noise
+    # - gaussian_blur
+    # - saturate
+    # - spatter
+OPTIM:
+  ADAPTIVE: True
+  TBN: True
+  UPDATE: True
+  METHOD: Adam
+  STEPS: 1
+  BETA: 0.9
+  LR: 1e-3
+  WD: 0.
+  ADAPT: 'hard_pl' # ent softmax_pl, hard_pl, rpl, conjugate
+ATTACK:
+  METHOD: "PGD"
